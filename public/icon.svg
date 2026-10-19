@@ -1,0 +1,60 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="100%" height="100%">
+  <defs>
+    <linearGradient id="tileGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="50%" stop-color="#f8fafc"/>
+      <stop offset="100%" stop-color="#e2e8f0"/>
+    </linearGradient>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0f172a"/>
+      <stop offset="100%" stop-color="#020617"/>
+    </linearGradient>
+    <filter id="tileShadow" x="-10%" y="-10%" width="130%" height="130%">
+      <feDropShadow dx="0" dy="16" stdDeviation="16" flood-color="#000000" flood-opacity="0.5"/>
+      <feDropShadow dx="0" dy="4" stdDeviation="4" flood-color="#000000" flood-opacity="0.3"/>
+    </filter>
+  </defs>
+
+  <!-- Background Canvas -->
+  <rect width="512" height="512" rx="112" fill="url(#bgGrad)"/>
+  
+  <!-- Subtle green felt / gaming accent glow -->
+  <circle cx="256" cy="256" r="180" fill="#059669" opacity="0.12" filter="blur(40px)"/>
+
+  <!-- Domino Tile Body -->
+  <g filter="url(#tileShadow)" transform="rotate(-8 256 256)">
+    <!-- Domino Outer Shell -->
+    <rect x="156" y="86" width="200" height="340" rx="24" fill="url(#tileGrad)" stroke="#cbd5e1" stroke-width="4"/>
+    
+    <!-- Central Divider Groove -->
+    <line x1="166" y1="256" x2="346" y2="256" stroke="#475569" stroke-width="5" stroke-linecap="round"/>
+    <!-- Central Metal Pivot Pin (Spinner / Biribilla) -->
+    <circle cx="256" cy="256" r="6" fill="#eab308" stroke="#ca8a04" stroke-width="1.5"/>
+
+    <!-- Top Half: 3 Pips (Diagonal) -->
+    <!-- Top-left -->
+    <circle cx="196" cy="126" r="13" fill="#0f172a"/>
+    <circle cx="194" cy="124" r="3" fill="#64748b"/>
+    <!-- Center -->
+    <circle cx="256" cy="186" r="13" fill="#0f172a"/>
+    <circle cx="254" cy="184" r="3" fill="#64748b"/>
+    <!-- Bottom-right of top half -->
+    <circle cx="316" cy="216" r="13" fill="#0f172a"/>
+    <circle cx="314" cy="214" r="3" fill="#64748b"/>
+
+    <!-- Bottom Half: 5 Pips (Quincunx) -->
+    <!-- Four Corners -->
+    <circle cx="196" cy="296" r="13" fill="#0f172a"/>
+    <circle cx="194" cy="294" r="3" fill="#64748b"/>
+    <circle cx="316" cy="296" r="13" fill="#0f172a"/>
+    <circle cx="314" cy="294" r="3" fill="#64748b"/>
+    <!-- Center Pip -->
+    <circle cx="256" cy="356" r="13" fill="#0f172a"/>
+    <circle cx="254" cy="354" r="3" fill="#64748b"/>
+    <!-- Bottom Corners -->
+    <circle cx="196" cy="386" r="13" fill="#0f172a"/>
+    <circle cx="194" cy="384" r="3" fill="#64748b"/>
+    <circle cx="316" cy="386" r="13" fill="#0f172a"/>
+    <circle cx="314" cy="384" r="3" fill="#64748b"/>
+  </g>
+</svg>
